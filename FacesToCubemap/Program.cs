@@ -10,16 +10,17 @@ namespace FacesToCubemap
     {
         static void Main(string[] args)
         {
+            // Example on how to use
             Bitmap[] faces = new Bitmap[6];
-            faces[0] = new Bitmap("TestMap_NegativeX.png"); // Left
-            faces[1] = new Bitmap("TestMap_PositiveY.png"); // Top
-            faces[2] = new Bitmap("TestMap_PositiveZ.png"); // Front 
-            faces[3] = new Bitmap("TestMap_NegativeY.png"); // Bottom
-            faces[4] = new Bitmap("TestMap_PositiveX.png"); // Right
-            faces[5] = new Bitmap("TestMap_NegativeZ.png"); // Back
+            faces[0] = new Bitmap("NegativeX.png"); // Left
+            faces[1] = new Bitmap("PositiveY.png"); // Top
+            faces[2] = new Bitmap("PositiveZ.png"); // Front 
+            faces[3] = new Bitmap("NegativeY.png"); // Bottom
+            faces[4] = new Bitmap("PositiveX.png"); // Right
+            faces[5] = new Bitmap("NegativeZ.png"); // Back
 
             Bitmap cubeMap = CreateCubemap(faces);
-            cubeMap.Save("Test.png", ImageFormat.Png);
+            cubeMap.Save("Cubemap.png", ImageFormat.Png);
         }
 
         private static Bitmap CreateCubemap(Bitmap[] faces)
